@@ -14,8 +14,7 @@ YELLOW = (255, 233, 0)
 
 pygame.init()
 FPS = 30
-SCREEN_WIDTH = 397
-SCREEN_HEIGHT = 562
+SCREEN_WIDTH, SCREEN_HEIGHT = 397, 562
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 
 #functions to draw anything in this world
@@ -39,7 +38,6 @@ def draw_cvetochek(x, y, scale, surf):
     x, y define the position of cvetochek
     x must be less than SCREEN_WIDTH
     y must be less than SCREEN_HEIGHT
-    scale defines the size of cvetochek
     surf defines the surface the cvetochek will be drawn on
     '''
     l = 15 * scale  # характерный размер цветочка
@@ -58,8 +56,7 @@ def draw_klumba(x, y, scale, should_be_flipped=False):
     draw_klumba draws klumba consisting of cvetochki
     using function draw_cvetochek()
     x, y define the position of cvetochek(top left corner)
-    x must be less than SCREEN_WIDTH
-    y must be less than SCREEN_HEIGHT
+    x, y must be less than SCREEN_WIDTH, SCREEN_HEIGHT respectively
     scale defines the size of klumba
     should_be_flipped takes meaning TRUE or FALSE
     should_be_flipped bool indicates if big floppa should flop the klumba 
@@ -78,8 +75,7 @@ def draw_animal_leg(x, y, scale, surface):
     '''
     is a support function that draws llama's leg
     x, y define the position of llama's leg
-    x must be less than SCREEN_WIDTH
-    y must be less than SCREEN_HEIGHT
+    x, y must be less than SCREEN_WIDTH, SCREEN_HEIGHT respectively
     scale defines the size of leg
     '''
     leg_surf = pygame.Surface((scale * 35, scale * 100), pygame.SRCALPHA, 32)
@@ -93,8 +89,7 @@ def draw_animal_ear(x, y, scale, surface):
     '''
     is a support function that draws llama's ear
     x, y define the position of llama's ear
-    x must be less than SCREEN_WIDTH
-    y must be less than SCREEN_HEIGHT
+    x, y must be less than SCREEN_WIDTH, SCREEN_HEIGHT respectively
     scale defines the size of ear    
     '''
     polygon(surface, WHITE, [(x, y), (x + scale * 10, y+ scale * 3), (x+scale * 4, y - scale * 3)])
@@ -104,8 +99,7 @@ def draw_eye(surf, color, x, y, scale, should_be_flipped=False):
     draw_eye draws llama's eye with a gleam
     surf defines the surface
     x, y define position of left corner of the eye
-    x must be less than SCREEN_WIDTH
-    y must be less than SCREEN_HEIGHT
+    x, y must be less than SCREEN_WIDTH, SCREEN_HEIGHT respectively
     color defines the color of the eye
     scale defines the size of the eye
     should_be_flipped takes meaning TRUE or FALSE
@@ -128,8 +122,7 @@ def draw_animal(x, y, scale, should_be_flipped=False):
     '''
     draw_animal draws the llama
     x, y define position of llama
-    x must be less than SCREEN_WIDTH
-    y must be less than SCREEN_HEIGHT
+    x, y must be less than SCREEN_WIDTH, SCREEN_HEIGHT respectively
     scale defines the size of llama
     should_be_flipped takes meaning TRUE or FALSE
     should_be_flipped bool indicates if big floppa should flop the animal
