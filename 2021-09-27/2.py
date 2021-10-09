@@ -31,7 +31,7 @@ def contouredellipse(surface, color1, color2, tupleofparametres):
     the ellipse will be centered inside the rectangle and bounded by it
     '''
     ellipse(surface, color1, tupleofparametres)
-    ellipse(surface, color2, tupleofparametres, width = 1)
+    ellipse(surface, color2, tupleofparametres, width=1)
     
 def draw_cvetochek(x, y, scale, surf):
     '''
@@ -53,7 +53,7 @@ def draw_cvetochek(x, y, scale, surf):
         contouredellipse(surf, WHITE, MOUNTAINS,
                 (x - x_list[i] * l, y - y_list[i] * l, 2 * l, l))
 
-def draw_klumba(x, y, scale, should_be_flipped):
+def draw_klumba(x, y, scale, should_be_flipped=False):
     '''
     draw_klumba draws klumba consisting of cvetochki
     using function draw_cvetochek()
@@ -99,7 +99,7 @@ def draw_animal_ear(x, y, scale, surface):
     '''
     polygon(surface, WHITE, [(x, y), (x + scale * 10, y+ scale * 3), (x+scale * 4, y - scale * 3)])
 
-def draw_eye(surf, color, x, y, scale, should_be_flipped):
+def draw_eye(surf, color, x, y, scale, should_be_flipped=False):
     ''' 
     draw_eye draws llama's eye with a gleam
     surf defines the surface
@@ -124,7 +124,7 @@ def draw_eye(surf, color, x, y, scale, should_be_flipped):
         surf = pygame.transform.flip(surf, True, False)    
     screen.blit(surf, (x, y))
 
-def draw_animal(x, y, scale, should_be_flipped):
+def draw_animal(x, y, scale, should_be_flipped=False):
     '''
     draw_animal draws the llama
     x, y define position of llama
